@@ -1,0 +1,15 @@
+
+body {  
+    background-color: black;
+}
+
+#gameBoard {
+    background-color: gray;
+    position: absolute;
+}
+
+.pieceStyle{ /* Style that apples to all pieces, universally*/ 
+    position:absolute;
+    box-sizing:border-box;
+    border : solid black 2px;
+}
