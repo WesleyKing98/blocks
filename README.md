@@ -30,6 +30,19 @@ Scoreboard,
 On-Screen D-Pad and buttons for mobile players
 Game Over if the pieces land above the game zone
 
+L piece + rotations
+I piece + rotations
+Square Piece + rotations
+T piece + rotations
+
 Controls (as of now):
 Directional buttons to move pieces,
 A Key to rotate pieces.
+
+Extra, fun notes:
+
+Some Tetris-style game programs use image files for the pieces, but I decided to use basic HTML divs.
+I wanted this project to not need any assets or images, but pure HTML, CSS and JavaScript. 
+
+Instead of one solid piece that drops and moves, each piece consists of 4 separate blocks that fall and move together. 
+Technically when you rotate the pieces, the piece isn’t actually “rotating”, but rather, the 4 blocks are warping positions together.
