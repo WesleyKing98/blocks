@@ -262,6 +262,280 @@
 				newPiece = false;
 			
 		}
+
+		function generateL(){
+
+			currentX1 = spawnXPosition
+			currentY1 = spawnYPosition
+
+			currentX2 = spawnXPosition+pieceSize
+			currentY2 = spawnYPosition
+
+			currentX3 = spawnXPosition
+			currentY3 = spawnYPosition-pieceSize
+
+			currentX4 = spawnXPosition
+			currentY4 = spawnYPosition-pieceSize*2
+
+			r = Math.floor(Math.random()*255)
+				g = Math.floor(Math.random()*255)
+				b = Math.floor(Math.random()*255)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX1 + "px";
+				newBlock.style.top = currentY1 + "px";
+				pieceArray[i] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX2 + "px";
+				newBlock.style.top = currentY2 + "px";
+				pieceArray[i+1] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX3 + "px";
+				newBlock.style.top = currentY3 + "px";
+				pieceArray[i+2] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				
+				newBlock.style.left = currentX4 + "px";
+				newBlock.style.top = currentY4 + "px";
+				pieceArray[i+3] = newBlock;
+				board.appendChild(newBlock)
+
+
+				newPiece = false;
+
+		}
+
+		function generateO(){
+
+			currentX1 = spawnXPosition
+			currentY1 = spawnYPosition
+
+			currentX2 = spawnXPosition+pieceSize
+			currentY2 = spawnYPosition
+
+			currentX3 = spawnXPosition
+			currentY3 = spawnYPosition-pieceSize
+
+			currentX4 = spawnXPosition+pieceSize
+			currentY4 = spawnYPosition-pieceSize
+
+			r = Math.floor(Math.random()*255)
+				g = Math.floor(Math.random()*255)
+				b = Math.floor(Math.random()*255)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX1 + "px";
+				newBlock.style.top = currentY1 + "px";
+				pieceArray[i] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX2 + "px";
+				newBlock.style.top = currentY2 + "px";
+				pieceArray[i+1] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX3 + "px";
+				newBlock.style.top = currentY3 + "px";
+				pieceArray[i+2] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				
+				newBlock.style.left = currentX4 + "px";
+				newBlock.style.top = currentY4 + "px";
+				pieceArray[i+3] = newBlock;
+				board.appendChild(newBlock)
+
+
+				newPiece = false;
+		}
+
+		function generateI(){
+
+			currentX1 = spawnXPosition
+			currentY1 = spawnYPosition
+
+			currentX2 = spawnXPosition
+			currentY2 = spawnYPosition-pieceSize
+
+			currentX3 = spawnXPosition
+			currentY3 = spawnYPosition-pieceSize*2
+
+			currentX4 = spawnXPosition
+			currentY4 = spawnYPosition-pieceSize*3
+
+			r = Math.floor(Math.random()*255)
+				g = Math.floor(Math.random()*255)
+				b = Math.floor(Math.random()*255)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX1 + "px";
+				newBlock.style.top = currentY1 + "px";
+				pieceArray[i] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX2 + "px";
+				newBlock.style.top = currentY2 + "px";
+				pieceArray[i+1] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX3 + "px";
+				newBlock.style.top = currentY3 + "px";
+				pieceArray[i+2] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				
+				newBlock.style.left = currentX4 + "px";
+				newBlock.style.top = currentY4 + "px";
+				pieceArray[i+3] = newBlock;
+				board.appendChild(newBlock)
+
+
+				newPiece = false;
+		}
+
+		function generateT(){
+
+			currentX1 = spawnXPosition
+			currentY1 = spawnYPosition
+
+			currentX2 = spawnXPosition+pieceSize
+			currentY2 = spawnYPosition
+
+			currentX3 = spawnXPosition
+			currentY3 = spawnYPosition-pieceSize
+
+			currentX4 = spawnXPosition+pieceSize
+			currentY4 = spawnYPosition-pieceSize
+
+			r = Math.floor(Math.random()*255)
+				g = Math.floor(Math.random()*255)
+				b = Math.floor(Math.random()*255)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX1 + "px";
+				newBlock.style.top = currentY1 + "px";
+				pieceArray[i] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX2 + "px";
+				newBlock.style.top = currentY2 + "px";
+				pieceArray[i+1] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				newBlock.style.left = currentX3 + "px";
+				newBlock.style.top = currentY3 + "px";
+				pieceArray[i+2] = newBlock;
+				board.appendChild(newBlock)
+
+				newBlock = document.createElement("div");
+				newBlock.className += 'pieceStyle';
+
+				newBlock.style.width = pieceSize +"px";
+				newBlock.style.height = pieceSize+"px";
+				newBlock.style.backgroundColor="rgb("+r+","+g+","+b+")";
+				
+				newBlock.style.left = currentX4 + "px";
+				newBlock.style.top = currentY4 + "px";
+				pieceArray[i+3] = newBlock;
+				board.appendChild(newBlock)
+
+
+				newPiece = false;
+		}
+
 		
 if (newPiece == true){
 			i+=4
@@ -269,7 +543,7 @@ if (newPiece == true){
 			lastX = -99 // This is just to re-initialize these values
 			lastY = -99
 
-			ranPiece = Math.floor(Math.random()*3) // RNG for generating a piece
+			ranPiece = Math.floor(Math.random()*6) // RNG for generating a piece
 
 			if (ranPiece==0){
 				pieceGenerated = "Z";
@@ -281,9 +555,29 @@ if (newPiece == true){
 				generateS();
 			}
 
-			if (ranPiece>=2){
+			if (ranPiece==2){
 				pieceGenerated = "J";
 				generateJ();
+			}
+
+			if (ranPiece==3){
+				pieceGenerated = "L";
+				generateL();
+			}
+
+			if (ranPiece==4){
+				pieceGenerated = "O";
+				generateO();
+			}
+
+			if (ranPiece==5){
+				pieceGenerated = "I";
+				generateI();
+			}
+
+			if (ranPiece>=6){
+				pieceGenerated = "T";
+				generateT();
 			}
 			
 		}
@@ -648,7 +942,7 @@ if (newPiece == true){
 		key = event.keyCode;
 		//alert(key);
 		if (key == 38){rotL = false} //Up arrow key
-		if (key == 39){right = false} //Right arrow key
+		if (key == 39){right = false}//Right arrow key
 		if (key == 37){left = false} //Left arrow key
 		if (key == 40){down = false} //Down arrow key
 		if (key == 65){rotL = false} //rotate left - A key
