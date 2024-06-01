@@ -46,3 +46,10 @@ I wanted this project to not need any assets or images, but pure HTML, CSS and J
 
 Instead of one solid piece that drops and moves, each piece consists of 4 separate blocks that fall and move together. 
 Technically when you rotate the pieces, the piece isn’t actually “rotating”, but rather, the 4 blocks are warping positions together.
+
+
+Currently working on 5-31-2024:
+
+Function for checkBar: Checks if a line is occuring. If a line occurs, then it deletes those blocks and moves all blocks above that Y level down one space.
+Then it checks again, up to 4 times, which is the max logically possible.
+
