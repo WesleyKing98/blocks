@@ -250,16 +250,17 @@ function lRotate(){
         
         lastRotation = rotation;
         rotation++;
-        currentX1-=pieceSize;
-        currentY1-=pieceSize; // Boattom piece of i
 
-        currentX2+=0; // second to bottom piece
+        currentX1-=pieceSize;
+        currentY1+=pieceSize; 
+
+        currentX2+=0; 
         currentY2+=0;
 
-        currentX3+=pieceSize; // second to top piece
+        currentX3+=pieceSize;
         currentY3+=pieceSize;
 
-        currentX4+=pieceSize*2; // top of i
+        currentX4+=pieceSize*2; 
         currentY4+=pieceSize*2;
 
 
@@ -268,7 +269,7 @@ function lRotate(){
         lastRotation = rotation;
         rotation += 1;
 
-        currentX1+=pieceSize;
+        currentX1-=pieceSize;
         currentY1-=pieceSize;
 
         currentX2-=0;
@@ -286,7 +287,7 @@ function lRotate(){
         rotation +=1;
 
         currentX1+=pieceSize;
-        currentY1+=pieceSize;
+        currentY1-=pieceSize;
 
         currentX2-=0;
         currentY2+=0;
@@ -299,10 +300,10 @@ function lRotate(){
     }
 
     else if (rotation >=3){
-        lastRotation = rotation; // I have to do interesting movements to get them to sync back with the first position, but it's ok
+        lastRotation = rotation;
         rotation =0;
 
-        currentX1-=pieceSize;
+        currentX1+=pieceSize;
         currentY1+=pieceSize;
 
         currentX2-=0;

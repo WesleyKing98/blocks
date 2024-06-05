@@ -22,6 +22,8 @@
 	rotL = false;
 	rotR = false;
 
+	paused = false;
+
 	lastRotation = 0; // last rotation state to revert to, if rotation is blocked
 	rotation = 0; // rotation state
 
@@ -105,13 +107,13 @@
 			currentX1 = spawnXPosition;
 			currentY1 = spawnYPosition;
 
-			currentX2 = spawnXPosition+pieceSize;
+			currentX2 = spawnXPosition-pieceSize;
 			currentY2 = spawnYPosition;
 
-			currentX3 = spawnXPosition;
+			currentX3 = spawnXPosition-pieceSize;
 			currentY3 = spawnYPosition-pieceSize;
 
-			currentX4 = spawnXPosition;
+			currentX4 = spawnXPosition-pieceSize;
 			currentY4 = spawnYPosition-pieceSize*2;
 
 		}
@@ -173,7 +175,7 @@ if (newPiece == true){
 			lastX = -99; // This is just to re-initialize these values
 			lastY = -99;
 
-			ranPiece = Math.floor(Math.random()*6); // RNG for generating a piece
+			ranPiece = 3 //Math.floor(Math.random()*6); // RNG for generating a piece
 
 			if (ranPiece==0){
 				pieceGenerated = "Z";
@@ -486,7 +488,8 @@ if (newPiece == true){
 		if (key == 37){left = true} //Left arrow key
 		if (key == 40){down = true} //Down arrow key
 		if (key == 65){rotL = true} //rotate left - A key
-
+		if (key == 80){clearInterval(intervalMain);document.getElementById('gameBoard').style.backgroundColor="#111111"; paused = true;}
+		if (key == 79 && paused){intervalMain = setInterval(main,1000/60);document.getElementById('gameBoard').style.backgroundColor="gray"; paused = false;}
 		if (key == 68){rotR = true} //rotate right - D key
 
 	}
@@ -504,5 +507,5 @@ if (newPiece == true){
 		if (key == 68){rotR = false} //rotate right - D key
 	}
 
-	setInterval(main,1000/60);
+	var intervalMain = setInterval(main,1000/60);
 
