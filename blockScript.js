@@ -12,6 +12,7 @@
 	board.style.width = boardSize/2  + "px"; // Game width is set to half the height
 	board.style.height = boardSize +"px";
 	board.style.left = (window.innerWidth/2)-(boardSize/4) + "px";
+	board.style.top = window.innerHeight*0.05 + "px";
 
 
 	// Initializing button press variables
@@ -153,10 +154,10 @@
 			currentX1 = spawnXPosition;
 			currentY1 = spawnYPosition;
 
-			currentX2 = spawnXPosition+pieceSize;
-			currentY2 = spawnYPosition;
+			currentX2 = spawnXPosition+=0;
+			currentY2 = spawnYPosition-pieceSize;
 
-			currentX3 = spawnXPosition;
+			currentX3 = spawnXPosition-pieceSize;
 			currentY3 = spawnYPosition-pieceSize;
 
 			currentX4 = spawnXPosition+pieceSize;
@@ -166,16 +167,16 @@
 		
 if (newPiece == true){
 
-			r = Math.floor(Math.random()*255); //Random RGB values. Right now, all pieces are completely randomly colored.
-			g = Math.floor(Math.random()*255);
-			b = Math.floor(Math.random()*255);
+			r = Math.floor(Math.random()*101); //Random RGB values. Right now, all pieces are completely randomly colored.
+			g = Math.floor(Math.random()*101);
+			b = Math.floor(Math.random()*106)+150;
 
 			i+=4;
 			rotation =0;
 			lastX = -99; // This is just to re-initialize these values
 			lastY = -99;
 
-			ranPiece = 3 //Math.floor(Math.random()*6); // RNG for generating a piece
+			ranPiece = Math.floor(Math.random()*7); // RNG for generating a piece
 
 			if (ranPiece==0){
 				pieceGenerated = "Z";
@@ -286,8 +287,8 @@ if (newPiece == true){
 
 		}
 		else{
-			for (z=0;z<=yArray.length;z++){ // Checks if the block is colliding with another block
-				if (currentY == yArray[z] && currentX == xArray[z]){
+			for (z=0;z<=yArray.length;z++){ // Checks if the block is colliding with another block, and double checks you didn't rotate under the floor
+				if (currentY == yArray[z] && currentX == xArray[z] || currentY >= boardSize){
 						currentX1 = lastX1;
 						currentX2 = lastX2;
 						currentX3 = lastX3;
@@ -355,6 +356,7 @@ if (newPiece == true){
 			case "J":{jRotate()};break;
 			case "L":{lRotate()};break;
 			case "I":{iRotate()};break;
+			case "T":{tRotate()};break;
 		}
 
 	}

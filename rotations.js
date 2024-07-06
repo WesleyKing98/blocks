@@ -244,6 +244,87 @@ checkXCollide(currentX3,currentY3,true);
 checkXCollide(currentX4,currentY4,true);
 }
 
+function tRotate(){
+
+    if (rotation == 0){
+        
+        lastRotation = rotation;
+        rotation++;
+
+        currentX1-=pieceSize;
+        currentY1-=pieceSize;
+
+        currentX2+=0; 
+        currentY2+=0;
+
+        currentX3+=pieceSize;
+        currentY3-=pieceSize;
+
+        currentX4-=pieceSize; 
+        currentY4+=pieceSize;
+
+
+    }
+    else if (rotation ==1){
+        lastRotation = rotation;
+        rotation += 1;
+
+        currentX1+=pieceSize;
+        currentY1-=pieceSize;
+
+        currentX2+=0; 
+        currentY2+=0;
+
+        currentX3+=pieceSize;
+        currentY3+=pieceSize;
+
+        currentX4-=pieceSize; 
+        currentY4-=pieceSize;
+    }
+
+    else if (rotation ==2){
+        lastRotation = rotation;
+        rotation +=1;
+
+        currentX1+=pieceSize;
+        currentY1+=pieceSize;
+
+        currentX2+=0; 
+        currentY2+=0;
+
+        currentX3-=pieceSize;
+        currentY3+=pieceSize;
+
+        currentX4+=pieceSize; 
+        currentY4-=pieceSize;
+    }
+
+    else if (rotation >=3){
+        lastRotation = rotation;
+        rotation =0;
+
+        currentX1-=pieceSize;
+        currentY1+=pieceSize;
+
+        currentX2+=0; 
+        currentY2+=0;
+
+        currentX3-=pieceSize;
+        currentY3-=pieceSize;
+
+        currentX4+=pieceSize; 
+        currentY4+=pieceSize;
+    }
+
+checkXCollide(currentX1,currentY1,true);
+checkXCollide(currentX2,currentY2,true);
+checkXCollide(currentX3,currentY3,true);
+checkXCollide(currentX4,currentY4,true);
+}
+
+
+
+
 function lRotate(){
 
     if (rotation == 0){
@@ -252,16 +333,16 @@ function lRotate(){
         rotation++;
 
         currentX1-=pieceSize;
-        currentY1+=pieceSize; 
+        currentY1+=0;
 
         currentX2+=0; 
-        currentY2+=0;
+        currentY2-=pieceSize;
 
         currentX3+=pieceSize;
-        currentY3+=pieceSize;
+        currentY3+=0;
 
         currentX4+=pieceSize*2; 
-        currentY4+=pieceSize*2;
+        currentY4+=pieceSize;
 
 
     }
@@ -269,16 +350,16 @@ function lRotate(){
         lastRotation = rotation;
         rotation += 1;
 
-        currentX1-=pieceSize;
+        currentX1+=0;
         currentY1-=pieceSize;
 
-        currentX2-=0;
+        currentX2+=pieceSize; 
         currentY2+=0;
 
-        currentX3-=pieceSize;
+        currentX3+=0;
         currentY3+=pieceSize;
 
-        currentX4-=pieceSize*2;
+        currentX4-=pieceSize; 
         currentY4+=pieceSize*2;
     }
 
@@ -287,32 +368,32 @@ function lRotate(){
         rotation +=1;
 
         currentX1+=pieceSize;
-        currentY1-=pieceSize;
+        currentY1+=0;
 
-        currentX2-=0;
-        currentY2+=0;
+        currentX2+=0; 
+        currentY2+=pieceSize;
 
         currentX3-=pieceSize;
-        currentY3-=pieceSize;
+        currentY3+=0;
 
-        currentX4-=pieceSize*2;
-        currentY4-=pieceSize*2;
+        currentX4-=pieceSize*2; 
+        currentY4-=pieceSize;
     }
 
     else if (rotation >=3){
         lastRotation = rotation;
         rotation =0;
 
-        currentX1+=pieceSize;
+        currentX1+=0;
         currentY1+=pieceSize;
 
-        currentX2-=0;
+        currentX2-=pieceSize; 
         currentY2+=0;
 
-        currentX3+=pieceSize;
+        currentX3+=0;
         currentY3-=pieceSize;
 
-        currentX4+=pieceSize*2;
+        currentX4+=pieceSize; 
         currentY4-=pieceSize*2;
     }
 
